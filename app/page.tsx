@@ -3,7 +3,7 @@
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { navItems } from "@/config";
+import { navItems } from "@/data";
 
 const Home = () => {
   return (

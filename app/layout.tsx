@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
@@ -17,7 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="" sizes="any" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
