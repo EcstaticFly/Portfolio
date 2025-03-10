@@ -7,6 +7,7 @@ import { navItems } from "@/data";
 import RecentProjects from "../components/RecentProjects";
 import useMounted from "./useMountedHook";
 import Clients from "@/components/Clients";
+import RecentActivities from "@/components/RecentActivities";
 
 const Home = () => {
   const mounted = useMounted();
@@ -21,6 +22,7 @@ const Home = () => {
         <Grid />
         <RecentProjects/>
         <Clients/>
+        <RecentActivities/>
       </div>
     </main>
   );
