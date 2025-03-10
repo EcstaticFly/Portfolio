@@ -6,6 +6,7 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
 import RecentProjects from "../components/RecentProjects";
 import useMounted from "./useMountedHook";
+import Clients from "@/components/Clients";
 
 const Home = () => {
   const mounted = useMounted();
@@ -19,6 +20,7 @@ const Home = () => {
         <Hero />
         <Grid />
         <RecentProjects/>
+        <Clients/>
       </div>
     </main>
   );
