@@ -5,8 +5,13 @@ import Grid from "@/components/Grid";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
 import RecentProjects from "../components/RecentProjects";
+import useMounted from "./useMountedHook";
 
 const Home = () => {
+  const mounted = useMounted();
+  if(!mounted) return (
+    <div className="h-screen bg-black-100"/>
+  );
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
