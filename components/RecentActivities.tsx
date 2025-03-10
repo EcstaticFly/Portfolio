@@ -7,7 +7,7 @@ const RecentActivities = () => {
     <section id="activities" className="py-20">
       <h1 className="heading">
         My
-        <span className="text-purple"> recent activities</span>
+        <span className="text-purple"> Recent Activities</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -15,6 +15,12 @@ const RecentActivities = () => {
           <Button
             key={activity.id}
             borderRadius="1.75rem"
+            style={{
+              background: "rgb(4,7,29)",
+              backgroundColor:
+                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+              borderRadius: `calc(1.75rem* 0.96)`,
+            }}
             className="flex-1 text-white border-neutral-200 dark:border-slate-800"
             duration={Math.floor(Math.random() * 10000) + 10000}
           >
