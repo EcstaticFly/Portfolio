@@ -23,8 +23,8 @@ const Hero = () => {
       </div>
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Hello World!👋 Suyash here.
+          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-81">
+            Transforming ideas into pixels and code.
           </h2>
 
           <TextGenerateEffect
@@ -32,11 +32,11 @@ const Hero = () => {
             words="Engineering the web, one commit at a time."
           />
 
-          <span className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Transforming ideas into pixels and code.
+          <span className="text-center md:tracking-wider mb-4 text-sm md:text-xl">
+          Hello World!👋 Suyash here, a Next.js and MERN Stack Developer based in India.
           </span>
 
-          <a href="#about">
+          <a href="#projects">
             <MagicButton
               title="Show my work"
               icon={<ArrowUpRightIcon />}

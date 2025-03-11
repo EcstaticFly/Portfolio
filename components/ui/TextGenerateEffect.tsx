@@ -41,7 +41,7 @@ export const TextGenerateEffect = ({
                 idx > 2 ? "text-purple" : "dark:text-white text-black"
               } opacity-0`}
               style={{
-                filter: filter ? "blur(6px)" : "none",
+                filter: filter ? "blur(0px)" : "none",
               }}
             >
               {word}{" "}

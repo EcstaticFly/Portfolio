@@ -8,7 +8,8 @@ const Approach = () => {
   return (
     <section id="approach" className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple"> Approach</span>
+        My<span className="text-purple"> Approach</span> to Efficient
+        Development
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
