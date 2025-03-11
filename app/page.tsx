@@ -9,6 +9,7 @@ import useMounted from "./useMountedHook";
 import Clients from "@/components/Clients";
 import RecentActivities from "@/components/RecentActivities";
 import Approach from "@/components/Approach";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   const mounted = useMounted();
@@ -23,6 +24,7 @@ const Home = () => {
         <Clients />
         <RecentActivities />
         <Approach />
+        <Footer />
       </div>
     </main>
   );
