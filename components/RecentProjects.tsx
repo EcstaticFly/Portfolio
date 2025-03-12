@@ -17,8 +17,9 @@ const RecentProjects = () => {
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={project.id}
+            onClick={() => window.open(project.link, "_blank")}
           >
-            <PinContainer title="Github" href="https://github.com/EcstaticFly">
+            <PinContainer title="Visit Now">
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -29,7 +30,7 @@ const RecentProjects = () => {
                 <img
                   src={project.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10 absolute bottom-0 h-full w-full"
                 />
               </div>
 

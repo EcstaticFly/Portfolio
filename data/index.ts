@@ -8,17 +8,19 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title:
+      "Great products start with great communication. Let's bring your ideas to life, together.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/b1.webp",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title:
+      "Adaptable and committed to delivering excellence, regardless of time zones.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -38,8 +40,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
+    title: "Driven by Technology and Innovation",
+    description: "Building solutions with passion and purpose.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -49,7 +51,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building an Interactive Code Editor.",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -72,77 +74,83 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Devium - Interactive Code Editor",
+    des: "Devium is a real-time code editor that lets users write, execute, and share code in up to 10 languages.",
+    img: "/p1-devium.webp",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/dock.svg", "/c.svg"],
+    link: "https://devium-nine.vercel.app/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Chatzy",
+    des: "Chatzy is a real-time chat application built with MERN stack, integrated AI chatbot and 30+ themes.",
+    img: "/p2-chatzy.webp",
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/mongo.svg",
+      "/cloud.svg",
+      "/gemini.webp",
+    ],
+    link: "https://chatzy-mxp8.onrender.com/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Flauntify",
+    des: "Flauntify is your one-stop shopping platform. Seamlessly browse, shop, and pay with ease.",
+    img: "/p3-flauntify.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ex.webp", "/mongo.svg", "/cloud.svg"],
+    link: "https://flauntify.onrender.com/",
   },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
+  // {
+  //   id: 4,
+  //   title: "",
+  //   des: "",
+  //   img: "",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+  //   link: "",
+  // },
 ];
 
-export const testimonials = [
+export const news = [
   {
     quote:
-      "Collaborating with Suyash was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Suyash's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Suyash is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I actively participated in Smart India Hackathon (SIH) 2024, where I developed an innovative platform enabling farmers to directly sell their crops to retailers, effectively eliminating middlemen and ensuring better profitability for farmers.",
+    name: "Suyash Pandey",
+    title: "Author",
   },
   {
     quote:
-      "Collaborating with Suyash was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Suyash's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Suyash is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I secured the Second Runner-Up position in the RBI@90 State-Level Quiz, competing among 200+ teams and demonstrating strong analytical and problem-solving skills. This achievement was further recognized with a cash prize of ₹1 Lakh.",
+    name: "Suyash Pandey",
+    title: "Author",
   },
   {
     quote:
-      "Collaborating with Suyash was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Suyash's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Suyash is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I have also recently started learning Machine Learning and Deep Learning, expanding my technical skill set to explore cutting-edge technologies and their real-world applications.",
+    name: "Suyash Pandey",
+    title: "Author",
   },
   {
     quote:
-      "Collaborating with Suyash was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Suyash's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Suyash is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I have solved 500+ coding problems on various competitive programming platforms, continuously honing my problem-solving abilities and enhancing my technical expertise.",
+    name: "Suyash Pandey",
+    title: "Author",
   },
-  {
-    quote:
-      "Collaborating with Suyash was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Suyash's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Suyash is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
+  // {
+  //   quote:
+  //     "",
+  //     name: "Suyash Pandey",
+  //   title: "Author",
+  // },
 ];
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "nextjs",
+    img: "/next.svg",
+    nameImg: "/nextName.png",
   },
   {
     id: 2,

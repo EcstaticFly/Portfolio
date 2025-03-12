@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Suyash's Portfolio",
   description:
     "Hey! I'm Suyash, your go-to web developer, turning ideas into pixels and code.",
+    icons: "/profile.jpeg"
 };
 
 export default function RootLayout({
