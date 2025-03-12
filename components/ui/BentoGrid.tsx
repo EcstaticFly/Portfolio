@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+
 import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
@@ -8,6 +9,8 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+
+const text = "suyash.2023ug1100@iiitranchi.ac.in";
 
 export const BentoGrid = ({
   className,
@@ -19,7 +22,6 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
         "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
         className
       )}
@@ -48,8 +50,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NextJS", "GraphQL"];
+  const leftLists = ["Next.js", "Express", "Typescript"];
+  const rightLists = ["React.js", "MongoDB", "Node.js"];
 
   const [copied, setCopied] = useState(false);
 
@@ -63,7 +65,6 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "suyash.2023ug1100@iiitranchi.ac.in";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -105,7 +106,7 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           <BackgroundGradientAnimation>
-            {/* <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div> */}
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
 
@@ -128,7 +129,7 @@ export const BentoGridItem = ({
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
@@ -140,7 +141,7 @@ export const BentoGridItem = ({
                 ))}
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
                   <span
