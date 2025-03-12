@@ -12,7 +12,7 @@ import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 
-const CustomCursor = dynamic(() => import("@/components/Cursor"), {
+const CosmicCursor = dynamic(() => import("@/components/Cursor"), {
   ssr: true,
 });
 
@@ -21,7 +21,7 @@ const Home = () => {
   if (!mounted) return <div className="h-screen bg-black-100" />;
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
-      {<CustomCursor />}
+      {<CosmicCursor />}
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
