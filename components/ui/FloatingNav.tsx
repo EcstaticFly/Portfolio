@@ -8,6 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa6";
+import { X } from "lucide-react";
 
 export const FloatingNav = ({
   navItems,
@@ -59,7 +60,7 @@ export const FloatingNav = ({
           ))}
         </div>
 
-        <button className="border bg-purple/[0.1] text-sm font-medium relative border-neutral-200 text-white px-4 py-2 rounded-full">
+        <button className="border bg-purple/[0.1] text-sm font-medium relative border-neutral-200 text-white px-4 py-2 rounded-full hover:bg-gradient-to-b from-blue-800/[0.3] to-purple/[0.3]">
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
@@ -67,12 +68,25 @@ export const FloatingNav = ({
         </button>
 
         <div className="xs:hidden ">
-          <button
+          <motion.button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="border p-2 rounded-full bg-purple/[0.1] text-white"
+            className="p-2 text-white rounded-full hover:bg-white/10 transition-colors duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label={isDropdownOpen ? "Close menu" : "Open menu"}
           >
-            <FaBars />
-          </button>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={isDropdownOpen ? "close" : "open"}
+                initial={{ opacity: 0, rotate: -90 }}
+                animate={{ opacity: 1, rotate: 0 }}
+                exit={{ opacity: 0, rotate: 90 }}
+                transition={{ duration: 0.3 }}
+              >
+                {isDropdownOpen ? <X size={20} /> : <FaBars size={20} />}
+              </motion.div>
+            </AnimatePresence>
+          </motion.button>
 
           {isDropdownOpen && (
             <div className="absolute top-12 right-0 w-40 bg-black-100 rounded-lg shadow-md">
