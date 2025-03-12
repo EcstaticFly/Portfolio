@@ -160,6 +160,9 @@ const config = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+      screens: {
+        "2xs": "430px",
+      }
     },
   },
   plugins: [

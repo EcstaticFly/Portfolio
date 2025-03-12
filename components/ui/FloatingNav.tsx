@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import {
   motion,
@@ -8,6 +7,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { FaBars } from "react-icons/fa6";
 
 export const FloatingNav = ({
   navItems,
@@ -21,22 +21,16 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      const direction = current - (scrollYProgress.getPrevious() ?? 0);
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
@@ -44,41 +38,58 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
+        initial={{ opacity: 1, y: -100 }}
+        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border rounded-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-5 py-2 items-center justify-center space-x-4 border-white/[0.2] bg-black-100",
+          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border rounded-full shadow-md z-[5000] px-5 py-2 items-center justify-center space-x-4 border-white/[0.2] bg-black-100",
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-        <button className="border bg-purple/[0.1] text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+
+        <div className="hidden 2xs:flex space-x-4">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link-${idx}`}
+              href={navItem.link}
+              className="relative dark:text-neutral-50 flex items-center space-x-1 text-neutral-600 hover:text-neutral-500"
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="!cursor-pointer text-sm">{navItem.name}</span>
+            </Link>
+          ))}
+        </div>
+
+        <button className="border bg-purple/[0.1] text-sm font-medium relative border-neutral-200 text-white px-4 py-2 rounded-full">
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
-
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
         </button>
+
+        <div className="2xs:hidden ">
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="border p-2 rounded-full bg-purple/[0.1] text-white"
+          >
+            <FaBars />
+          </button>
+
+          {isDropdownOpen && (
+            <div className="absolute top-12 right-0 w-40 bg-black-100 rounded-lg shadow-md">
+              {navItems.map((navItem, idx) => (
+                <Link
+                  key={`link-${idx}`}
+                  href={navItem.link}
+                  className="block px-4 py-2 text-white hover:bg-purple/[0.2]"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  {navItem.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </motion.div>
     </AnimatePresence>
   );

@@ -17,7 +17,7 @@ function Footer() {
   };
 
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full mb-[30px] md:mb-4 pb-10" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Interested in learning more about me and elevating{" "}
