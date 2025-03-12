@@ -46,8 +46,7 @@ export const FloatingNav = ({
           className
         )}
       >
-
-        <div className="hidden 2xs:flex space-x-4">
+        <div className="hidden xs:flex space-x-4">
           {navItems.map((navItem, idx) => (
             <Link
               key={`link-${idx}`}
@@ -67,7 +66,7 @@ export const FloatingNav = ({
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
         </button>
 
-        <div className="2xs:hidden ">
+        <div className="xs:hidden ">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="border p-2 rounded-full bg-purple/[0.1] text-white"
