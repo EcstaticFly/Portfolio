@@ -46,7 +46,7 @@ const CosmicCursor = () => {
     // Pulsing aura
     gsap.to(aura, {
       scale: 1.3,
-      opacity: 0.3,
+      opacity: 0.8,
       repeat: -1,
       yoyo: true,
       duration: 2.5,

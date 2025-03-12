@@ -154,25 +154,25 @@ export const companies = [
   },
   {
     id: 2,
+    name: "typescript",
+    img: "/ts.svg",
+    nameImg: "/tsName.webp",
+  },
+  {
+    id: 3,
+    name: "mongoDB",
+    img: "/mongo.svg",
+    nameImg: "/mongoName.jpg",
+  },
+  {
+    id: 4,
     name: "appwrite",
     img: "/app.svg",
     nameImg: "/appName.svg",
   },
   {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
     id: 5,
-    name: "docker.",
+    name: "docker",
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
@@ -181,29 +181,29 @@ export const companies = [
 export const recentActivities = [
   {
     id: 1,
-    title: "Develop Chatzy",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Gained proficiency in Docker",
+    desc: "Enhancing my ability to build, deploy, and manage containerized applications efficiently.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Develop Devium",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Learned Next.js",
+    desc: "Enabling me to create high-performance and scalable web applications.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Develop Flauntify",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Mastered TypeScript",
+    desc: "Improving code quality, maintainability, and developer productivity through strong typing and robust tooling.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Learn Nextjs",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Proficiency in creating WebSockets",
+    desc: "Enhancing user experience with instant updates.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

@@ -9,11 +9,11 @@ Sentry.init({
 
   integrations: [
     Sentry.replayIntegration(),
-    Sentry.feedbackIntegration({ //{Not visible currently, will look into it later}
-      colorScheme: "dark",
-      isNameRequired: true,
-      isEmailRequired: true,
-    }),
+    // Sentry.feedbackIntegration({ //{Not visible currently, will look into it later}
+    //   colorScheme: "dark",
+    //   isNameRequired: true,
+    //   isEmailRequired: true,
+    // }),
   ],
 
   tracesSampleRate: 1,
