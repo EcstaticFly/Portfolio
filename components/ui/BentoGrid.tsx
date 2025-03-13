@@ -1,13 +1,12 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-
-import Lottie from "react-lottie";
+import confetti from "canvas-confetti";
 
 import { cn } from "@/lib/utils";
+// import animationData from "@/data/confetti.json"
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
 const text = "suyash.2023ug1100@iiitranchi.ac.in";
@@ -53,20 +52,51 @@ export const BentoGridItem = ({
   const leftLists = ["Next.js", "Express", "Typescript"];
   const rightLists = ["React.js", "MongoDB", "Node.js"];
 
-  const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
+  const [copied, setCopied] = useState(false);
+  const confettiCanvasRef = useRef<HTMLCanvasElement>(null);
+
+  // const defaultOptions = {
+  //   loop: copied,
+  //   autoplay: copied,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // }
+
+  
+  // Create a safer confetti function
+  const triggerConfetti = () => {
+    if (confettiCanvasRef.current) {
+      const myCanvas = confettiCanvasRef.current;
+      const myConfetti = confetti.create(myCanvas, { 
+        resize: true,
+        useWorker: false // Disable worker to avoid transferControlToOffscreen issue
+      });
+      
+      return myConfetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6, x: 0.5 },
+        colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'],
+        // defaultOptions
+      });
+    }
+    return Promise.resolve();
   };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
     setCopied(true);
+    
+    // Only trigger confetti if we're in the right div (id === 6)
+    if (id === 6) {
+      // We'll use a small timeout to ensure the canvas is properly mounted
+      setTimeout(() => {
+        triggerConfetti();
+      }, 10);
+    }
   };
 
   return (
@@ -105,9 +135,17 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
+          <>
+            <div className="absolute inset-0 z-10 pointer-events-none">
+              <canvas 
+                ref={confettiCanvasRef} 
+                className="absolute inset-0 w-full h-full pointer-events-none"
+              />
+            </div>
+            <BackgroundGradientAnimation>
+              <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+            </BackgroundGradientAnimation>
+          </>
         )}
 
         <div
@@ -139,10 +177,10 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
@@ -156,15 +194,7 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 6 && (
-            <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              >
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
-
+            <div className="mt-5 relative z-20">
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
