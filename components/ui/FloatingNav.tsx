@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import {
   motion,
@@ -7,8 +9,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { FaBars } from "react-icons/fa6";
-import { X } from "lucide-react";
+import { X, Menu } from "lucide-react";
 
 export const FloatingNav = ({
   navItems,
@@ -83,7 +84,7 @@ export const FloatingNav = ({
                 exit={{ opacity: 0, rotate: 90 }}
                 transition={{ duration: 0.3 }}
               >
-                {isDropdownOpen ? <X size={20} /> : <FaBars size={20} />}
+                {isDropdownOpen ? <X size={20} /> : <Menu size={20} />}
               </motion.div>
             </AnimatePresence>
           </motion.button>
