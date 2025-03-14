@@ -15,6 +15,12 @@ Sentry.init({
     }),
   ],
 
+  ignoreErrors: [
+    /Cannot read properties of undefined/,
+    /targetProp/,
+    /@react-three\/fiber/
+  ],
+
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
 
