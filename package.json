@@ -11,8 +11,8 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "@react-three/drei": "^9.105.4",
-    "@react-three/fiber": "^8.16.2",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
     "@sentry/nextjs": "^9.5.0",
     "@tabler/icons-react": "^3.1.0",
     "@types/three": "^0.163.0",
