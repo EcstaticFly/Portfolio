@@ -20,7 +20,7 @@ export const gridItems = [
   {
     id: 2,
     title:
-      "Adaptable and committed to delivering excellence, regardless of time zones.",
+      "I aspire to deliver solutions beyond time zones and borders.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
