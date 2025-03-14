@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const FloatingDots = () => {
-  const dots = Array.from({ length: 50 });
+  const dots = Array.from({ length: 70 });
 
   return (
     <>
