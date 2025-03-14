@@ -29,10 +29,10 @@ const Approach = () => {
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-pink-700"
+            containerClassName="bg-pink-800"
             colors={[
-              [236, 72, 153],
-              [232, 121, 249],
+              [255, 166, 158],
+              [221, 255, 247],
             ]}
             dotSize={2}
           />
