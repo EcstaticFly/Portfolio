@@ -100,7 +100,7 @@ export const projects = [
     des: "Flauntify is your one-stop shopping platform. Seamlessly browse, shop, and pay with ease.",
     img: "/p3-flauntify.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ex.webp", "/mongo.svg", "/cloud.svg"],
-    link: "https://flauntify.onrender.com/",
+    link: "https://flauntify.vercel.app/",
   },
   // {
   //   id: 4,
