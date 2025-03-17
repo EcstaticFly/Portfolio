@@ -46,7 +46,7 @@ const CosmicCursor = () => {
     // Pulsing aura
     gsap.to(aura, {
       scale: 1.3,
-      opacity: 0.8,
+      opacity: 5,
       repeat: -1,
       yoyo: true,
       duration: 2.5,
@@ -59,7 +59,7 @@ const CosmicCursor = () => {
         trail,
         {
           scale: 0.6,
-          opacity: 0.6,
+          opacity: 5,
         },
         {
           scale: 1.2,
@@ -79,10 +79,10 @@ const CosmicCursor = () => {
         pulse,
         {
           scale: 0.2,
-          opacity: 0.8,
+          opacity: 5,
         },
         {
-          scale: 2,
+          scale: 3,
           opacity: 0,
           duration: 2,
           ease: "expo.out",
@@ -165,21 +165,21 @@ const CosmicCursor = () => {
       // Reset aura
       gsap.to(aura, {
         scale: 1,
-        opacity: 0.4,
+        opacity: 5,
         duration: 0.3,
       });
 
       // Reset stars
       gsap.to(stars, {
         scale: 1,
-        opacity: 0.5,
+        opacity: 5,
         duration: 0.3,
       });
 
       // Reset orbit speed
       gsap.to(orbit, {
         timeScale: 1,
-        opacity: 0.5,
+        opacity: 5,
         duration: 0.3,
       });
     };
@@ -264,7 +264,7 @@ const CosmicCursor = () => {
           background:
             "radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(147, 112, 219, 0.1) 40%, transparent 70%)",
           borderRadius: "50%",
-          opacity: 0.6,
+          opacity: 5,
           filter: "blur(0px)",
         }}
       />
@@ -272,7 +272,7 @@ const CosmicCursor = () => {
       {/* Star pattern */}
       <div
         ref={starsRef}
-        className="fixed top-0 left-0 w-64 h-64 pointer-events-none z-[5300] opacity-70"
+        className="fixed top-0 left-0 w-64 h-64 pointer-events-none z-[5300] opacity-100"
         style={{
           background: `
             repeating-radial-gradient(
@@ -301,7 +301,7 @@ const CosmicCursor = () => {
       {/* Trail effect */}
       <div
         ref={trailRef}
-        className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[5400] opacity-40"
+        className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[5400] opacity-100"
         style={{
           background:
             "radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, rgba(147, 112, 219, 0.1) 50%, transparent 70%)",
@@ -313,7 +313,7 @@ const CosmicCursor = () => {
       {/* Pulse effect */}
       <div
         ref={pulseRef}
-        className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[5200] opacity-30"
+        className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[5200] opacity-100"
         style={{
           border: "2px solid rgba(138, 43, 226, 0.5)",
           borderRadius: "50%",
@@ -323,7 +323,7 @@ const CosmicCursor = () => {
       {/* Orbiting particles */}
       <div
         ref={orbitRef}
-        className="fixed top-0 left-0 w-48 h-48 pointer-events-none z-[5100] opacity-50"
+        className="fixed top-0 left-0 w-48 h-48 pointer-events-none z-[5100] opacity-100"
         style={{
           background: `
             conic-gradient(
