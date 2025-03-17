@@ -328,13 +328,13 @@ const CosmicCursor = () => {
           background: `
             conic-gradient(
               from 0deg,
-              transparent 0deg 88deg,
-              rgba(138, 43, 226, 0.2) 88deg 92deg,
-              transparent 92deg 178deg,
+              transparent 30deg 0deg,
+              rgba(138, 43, 226, 0.2) 88deg 90deg,
+              transparent 92deg 122deg,
               rgba(147, 112, 219, 0.2) 178deg 182deg,
-              transparent 182deg 268deg,
+              transparent 182deg 212deg,
               rgba(138, 43, 226, 0.2) 268deg 272deg,
-              transparent 272deg 358deg,
+              transparent 272deg 302deg,
               rgba(147, 112, 219, 0.2) 358deg 360deg
             )
           `,
