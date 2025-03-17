@@ -24,5 +24,5 @@ A sleek and modern personal portfolio website built with **Next.js**, **TypeScri
 This project is licensed under the **GNU GENERAL PUBLIC LICENSE v3**.
 
 ## 📬 Contact
-For inquiries, reach out to me at [[suyash.2023ug1100@iiitranchi.ac.in](mailto\:suyash.2023ug1100@iiitranchi.ac.in)]..
+For inquiries, reach out to me at [Suyash Pandey](mailto\:suyash.2023ug1100@iiitranchi.ac.in).
 
