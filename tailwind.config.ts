@@ -161,7 +161,7 @@ const config = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       screens: {
-        "xs": "430px",
+        "xs": "385px",
       }
     },
   },
