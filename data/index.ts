@@ -51,7 +51,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building an Interactive Code Editor.",
+    title: "Currently building Campaign Management Site.",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -102,14 +102,14 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/ex.webp", "/mongo.svg", "/cloud.svg"],
     link: "https://flauntify.vercel.app/",
   },
-  // {
-  //   id: 4,
-  //   title: "",
-  //   des: "",
-  //   img: "",
-  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-  //   link: "",
-  // },
+  {
+    id: 4,
+    title: "ReferralHub",
+    des: "ReferralHub helps businesses launch campaigns, track referrals, and analyze performance—all in one place.",
+    img: "/p4-referralhub.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/mongo.svg", "/ex.webp", "/gemini.webp"],
+    link: "https://referral-hub-alpha.vercel.app/",
+  },
 ];
 
 export const news = [
