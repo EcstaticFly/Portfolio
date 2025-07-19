@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Suyash's Portfolio",
   description:
     "Hey! I'm Suyash, your go-to web developer, turning ideas into pixels and code.",
-    icons: "/profile.jpeg"
+  icons: "/profile.jpeg",
 };
 
 export default function RootLayout({
@@ -20,9 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="" sizes="any" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -31,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
