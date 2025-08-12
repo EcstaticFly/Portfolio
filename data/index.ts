@@ -19,8 +19,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title:
-      "I aspire to deliver solutions beyond time zones and borders.",
+    title: "I aspire to deliver solutions beyond time zones and borders.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -51,7 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building Campaign Management Site.",
+    title: "Currently building Multimedia content site.",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -107,12 +106,24 @@ export const projects = [
     title: "ReferralHub",
     des: "ReferralHub helps businesses launch campaigns, track referrals, and analyze performance—all in one place.",
     img: "/p4-referralhub.webp",
-    iconLists: ["/re.svg", "/tail.svg", "/mongo.svg", "/ex.webp", "/gemini.webp"],
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/mongo.svg",
+      "/ex.webp",
+      "/gemini.webp",
+    ],
     link: "https://referral-hub-alpha.vercel.app/",
   },
 ];
 
 export const news = [
+  {
+    quote:
+      "I reached the Semi-Finals of Flipkart Grid 7.0, showcasing my technical expertise and problem-solving abilities in a highly competitive national-level challenge.",
+    name: "Suyash Pandey",
+    title: "Author",
+  },
   {
     quote:
       "I actively participated in Smart India Hackathon (SIH) 2024, where I developed an innovative platform enabling farmers to directly sell their crops to retailers, effectively eliminating middlemen and ensuring better profitability for farmers.",
@@ -127,22 +138,16 @@ export const news = [
   },
   {
     quote:
-      "I have also recently started learning Machine Learning and Deep Learning, expanding my technical skill set to explore cutting-edge technologies and their real-world applications.",
+      "I have solved 500+ coding problems on various competitive programming platforms, continuously honing my problem-solving abilities and enhancing my technical expertise.",
     name: "Suyash Pandey",
     title: "Author",
   },
   {
     quote:
-      "I have solved 500+ coding problems on various competitive programming platforms, continuously honing my problem-solving abilities and enhancing my technical expertise.",
+      "I have also recently started learning Machine Learning and Deep Learning, expanding my technical skill set to explore cutting-edge technologies and their real-world applications.",
     name: "Suyash Pandey",
     title: "Author",
   },
-  // {
-  //   quote:
-  //     "",
-  //     name: "Suyash Pandey",
-  //   title: "Author",
-  // },
 ];
 
 export const companies = [
@@ -188,7 +193,7 @@ export const recentActivities = [
   },
   {
     id: 2,
-    title: "Learned Next.js",
+    title: "Learned Nest.js",
     desc: "Enabling me to create high-performance and scalable web applications.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
