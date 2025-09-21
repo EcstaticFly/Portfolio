@@ -126,9 +126,9 @@ export const news = [
   },
   {
     quote:
-      "I actively participated in Smart India Hackathon (SIH) 2024, where I developed an innovative platform enabling farmers to directly sell their crops to retailers, effectively eliminating middlemen and ensuring better profitability for farmers.",
+      "I recently secured my second internship with SecNode, where I'll be building an AI-powered DAST scanner for websites.",
     name: "Suyash Pandey",
-    title: "Author",
+    title: "Full Stack Developer Intern",
   },
   {
     quote:
